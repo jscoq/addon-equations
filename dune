@@ -1,0 +1,11 @@
+
+(rule
+ (targets coq-pkgs)
+ (deps
+  (package equations)
+  workdir/src/equations_plugin.cma
+  (:pkg-json equations-pkg.json))
+ (action
+  (run jscoq build %{pkg-json})))
+
+(dirs workdir)
