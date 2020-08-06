@@ -12,5 +12,5 @@ get: $(WORKDIR)
 $(WORKDIR):
 	git clone --depth=1 --no-checkout -b $(TAG) $(REPO) $(WORKDIR)
 	( cd $(WORKDIR) && git checkout $(TAG) )
-	cp -r dune-files/ $(WORKDIR)
+	cp -r dune-files/* $(WORKDIR)/
 
