@@ -8,4 +8,8 @@
  (action
   (run jscoq build %{pkg-json})))
 
+(alias
+ (name all)
+ (deps package.json))
+
 (dirs workdir)
