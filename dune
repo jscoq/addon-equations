@@ -6,7 +6,7 @@
   workdir/src/equations_plugin.cma
   (:pkg-json equations-pkg.json))
  (action
-  (run jscoq build %{pkg-json})))
+  (run npx %{env:pkgtool=jscoq} build %{pkg-json})))
 
 (alias
  (name all)
