@@ -2,9 +2,9 @@
 (rule
  (targets coq-pkgs)
  (deps
-  (package equations)
+  (package coq-equations)
   workdir/src/equations_plugin.cma
-  (:pkg-json equations-pkg.json))
+  (:pkg-json coq-equations.json))
  (action
   (run npx %{env:pkgtool=jscoq} build %{pkg-json})))
 
