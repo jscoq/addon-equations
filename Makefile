@@ -1,5 +1,5 @@
 REPO = https://github.com/mattam82/Coq-Equations.git
-TAG = v1.3-8.14
+TAG = v1.3-8.15
 WORKDIR = workdir
 
 .PHONY: all get
