@@ -5,6 +5,7 @@ WORKDIR = workdir
 .PHONY: all get
 
 all: $(WORKDIR)
+	dune build workdir/META.coq-equations
 	dune build
 
 get: $(WORKDIR)
