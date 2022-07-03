@@ -5,13 +5,12 @@ WORKDIR = workdir
 .PHONY: all get
 
 all: $(WORKDIR)
-	dune build workdir/META.coq-equations
 	dune build
 
 get: $(WORKDIR)
 
 $(WORKDIR):
 	git clone --depth=1 --no-checkout -b $(TAG) $(REPO) $(WORKDIR)
-	( cd $(WORKDIR) && git checkout $(TAG) )
+	( cd $(WORKDIR) && git checkout $(TAG) && git apply ../patches/legacy-compat.patch )
 	rm $(WORKDIR)/theories/HoTT/dune  # HoTT still not available for 8.14
 

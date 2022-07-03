@@ -1,0 +1,20 @@
+diff --git a/theories/Type/Loader.v b/theories/Type/Loader.v
+index c3e7ed9..16cbcca 100644
+--- a/theories/Type/Loader.v
++++ b/theories/Type/Loader.v
+@@ -11,7 +11,7 @@
+ Require Import Extraction.
+ 
+ (** This exports tactics *)
+-Declare ML Module "coq-equations.plugin".
++Declare ML Module "equations_plugin:coq-equations.plugin".
+ 
+ Set Warnings "-notation-overridden".
+ From Equations Require Export Init Signature.
+@@ -32,4 +32,4 @@ Global Obligation Tactic := Equations.CoreTactics.equations_simpl.
+ Ltac solve_rec := simpl in * ; cbv zeta ; intros ;
+   try typeclasses eauto with subterm_relation Below rec_decision.
+ 
+-Export EquationsNotations.
+\ No newline at end of file
++Export EquationsNotations.
