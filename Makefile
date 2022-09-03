@@ -5,9 +5,8 @@ WORKDIR = workdir
 .PHONY: all get
 
 all: $(WORKDIR)
-	# some Dune dependency mixup; build plugin first
-	dune build '%{cmxa:workdir/src/equations_plugin}'
-	dune build
+	# not parallel: some Dune dependency mixup with generating META file
+	dune build -j1
 
 get: $(WORKDIR)
 
