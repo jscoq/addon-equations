@@ -1,7 +1,7 @@
 {
     "name": "@jscoq/equations",
     "description": "Equations 1.3 for jsCoq",
-    "version": "0.16.0",
+    "version": "0.17.0",
     "files": ["README.md", "coq-pkgs"],
     "repository": {
         "type": "git",
